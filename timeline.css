@@ -1,0 +1,135 @@
+/* For country guidelines */
+/* Apply box-sizing to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Set a background color and font for the entire page */
+body {
+  background-color: #AED8EA;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The vertical ruler */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around timeline content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* Circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #2C5371;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Position containers to the left and right */
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+/* Arrows pointing right for left containers */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Arrows pointing left for right containers */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Adjust circle position for right containers */
+.right::after {
+  left: -16px;
+}
+
+/* Styling for timeline content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries for responsive timeline */
+@media screen and (max-width: 600px) {
+  /* Adjust position of the timeline ruler */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Adjust arrow styles for smaller screens */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Adjust circle position for smaller screens */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+  /* Adjust positioning for right containers on smaller screens */
+  .right {
+    left: 0%;
+  }
+}

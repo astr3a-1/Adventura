@@ -1,0 +1,67 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="navbar.css">
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href=cs.css">
+  
+    <!-- Navigation bar, the class is navBar to alter the whole thing on ALL pages with css -->
+  <body class = "pg4">
+  <header>
+    <nav class = "navBar">
+        <nav class = "text1">
+          <div class="logoimg">
+            <img src = "logo.png" width = "100" height = "100" >
+          </div>
+      <ul>
+        <div class = "button1">
+        <li><a href = "index.html" > Home </a></li> 
+          </div>
+        <div class = "button2">
+        <li><a href = "flightInfo.html">Flight Info</a></li>
+        </div>
+        <div class = "button3">
+        <li><a href = "countryGuide.html">Country Guide</a></li>
+        </div>
+        <div class = "button4">
+        <li><a href = "countrySafety.html">Country Safety</a></li>
+        </div>
+        <div class = "button5">
+        <li><a href = "communicate.html">Communication</a></li>
+        </div>
+      </ul>
+      </nav>
+    </nav>
+  </header>
+  </div>
+
+  <h1 class ="csTitle">Country Safety</h1>
+
+
+
+<div class="container">
+    <div class="box">
+      
+      <h2> Country Safety Info for France </h2>
+      <p> France is not the safest when it comes to travel. Pickpocketing, phone snatching and stealing is very common especially in more touristy areas so it is best to keep a close eye on all personal belongings. A few important things to note would be that it is illegal to photograph security forces, including the police. Police also may randomly conduct searches (especially around the borders) so it is always good to keep some form of identification of you, just be careful it doesn't get stolen. </p>
+      <p> 112= Main Emergency phone number, 15=Ambulance, 17=Police, 18=Fire department </p>
+      <img width = "600" height = "10" src="franceimg.png" alt="Image 1">
+    </div>
+    <div class="box">
+      <h2> Country Safety Info for Italy </h2>
+      <p>Italy is pretty safe, it is ranked 30-35 safest country in the world according to the U.N. and Global Peace Index. The locals also tend to be more welcoming and open to tourists. However this does not mean there are not still safety precautions you should follow. Pickpocketing is still common around the more touristy areas but as long as you are careful and keep an eye on your belongings you should be fine. Keep cars locked and do not store personal belongings in vehicle, especially if its a rental because thieves will tend to target rental cars. Italy also has a lot of police officers, its 9th in the world ranked for police presence so there is always one nearby. </p>
+      <p> 112= Main Emergency phone number, 118=Ambulance, 113=Police, 115=Fire department
+</p>
+      <img src="italyimg.png" alt="Image 2">
+    </div>
+  </div>
+
+
+  
+
+  <script>
+  function changeContent(boxNumber) {
+    const box = document.querySelector(`.box:nth-child(${boxNumber}) p`);
+    box.textContent = "New Text";
+  }
+</script>
+  </body>
+</head>
